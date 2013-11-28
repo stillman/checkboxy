@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="jquery.checkboxy.css" type="text/css">
+<style type="text/css">
+body {
+	font-family: Tahoma, Arial, sans-serif;
+	font-size: 14px;
+	background-color: #DDD;
+	padding: 0;
+	margin: 0;
+}
+
+pre {
+	border: 1px solid #DDD;
+	background-color: #F5F5F5;
+	padding: 10px;
+}
+
+div.content {
+	padding: 20px;
+	background-color: #FFF;
+	box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+	margin: 20px auto;
+	width: 600px;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+	font-size: 32px;
+}
+
+h2 {
+	font-size: 24px;
+}
+
+h3 {
+	font-size: 18px;
+}
+
+label {
+	display: inline-block;
+	padding: 3px 0;
+}
+
+</style>
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="jquery.checkboxy.js"></script>
+<script>
+$(function() {
+
+$('input.checkboxy1').checkboxy();
+$('input.checkboxy2').checkboxy({class: 'checkboxy_big'});
+
+});
+</script>
+</head>
+<body>
+
+<div class="content">
+	<h1>Checkboxy demo page</h1>
+
+	<h2>Usage</h2>
+
+	<p>Usage is pretty simple. First, include the jQuery library</p>
+	<pre>&lt;script src="http://code.jquery.com/jquery-1.10.2.min.js"&gt;&lt;/script&gt;</pre>
+
+	<p>Then, include CSS and JS files of checkboxy</p>
+	<pre>&lt;link rel="stylesheet" href="jquery.checkboxy.css" type="text/css"&gt;
+&lt;script src="jquery.checkboxy.js"&gt;&lt;/script&gt;</pre>
+
+	<p>And the final step is to connect checkboxy plugin to elements on a page</p>
+<pre>
+$(function() {
+  $('input[type="checkbox"]').checkboxy();
+});
+</pre>
+
+<p>That's it!</p>
+
+	<h2>Examples</h2>
+
+	<h3>Style 1</h3>
+
+	<label><input class="checkboxy1" name="test1" type="checkbox" value="1"> Non-checked</label>
+	<br>
+	<label><input class="checkboxy1" name="test2" type="checkbox" value="1" checked="checked"> Checked</label>
+	<br>
+	<label><input class="checkboxy1" disabled="disabled" name="test3" type="checkbox" value="1"> Disabled non-checked</label>
+	<br>
+	<label><input class="checkboxy1" disabled="disabled" name="test4" type="checkbox" value="1" checked="checked"> Disabled checked</label>
+
+	<br><br>
+
+	<input class="checkboxy1" name="test" type="checkbox" value="5" checked="checked">
+	<input class="checkboxy1" name="test" type="checkbox" value="6" checked="checked" disabled="disabled">
+
+	<h3>Style 2</h3>
+
+	<label><input class="checkboxy2" name="test1" type="checkbox" value="1"> Non-checked</label>
+	<br>
+	<label><input class="checkboxy2" name="test2" type="checkbox" value="1" checked="checked"> Checked</label>
+	<br>
+	<label><input class="checkboxy2" disabled="disabled" name="test3" type="checkbox" value="1"> Disabled non-checked</label>
+	<br>
+	<label><input class="checkboxy2" disabled="disabled" name="test4" type="checkbox" value="1" checked="checked"> Disabled checked</label>
+
+	<br><br>
+
+	<input class="checkboxy2" name="test" type="checkbox" value="5" checked="checked">
+	<input class="checkboxy2" name="test" type="checkbox" value="6" checked="checked" disabled="disabled">
+
+</div>
+
+
+</body>
+</html>

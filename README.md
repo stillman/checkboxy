@@ -1,4 +1,4 @@
 checkboxy
 =========
 
-A simple jquery checkbox plugin
+A simple jQuery checkbox plugin

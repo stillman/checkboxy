@@ -42,8 +42,7 @@ $.fn.checkboxy = function(options) {
 
 	$(options.tagname + '.' + options.class).remove();
 
-	this.each(function() {
-		var id = new Date().getTime();
+	this.each(function(id) {
 		var $input = $(this);
 		var $checkboxy = $('<' + options.tagname + '/>').addClass(options.class);
 
